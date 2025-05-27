@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto do Desmatamento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS incorporado para garantir funcionalidade imediata */
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #81c784;
+            --dark-color: #1b5e20;
+            --light-color: #e8f5e9;
+            --text-color: #333;
+            --white: #fff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        a {
+            color: var(--dark-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--primary-color);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: var(--dark-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--white);
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        /* Sections */
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        /* Problems Section */
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .problem-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .problem-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        /* Consequences Section */
+        .consequences-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .consequences-list ul {
+            list-style-position: inside;
+            margin-bottom: 2rem;
+        }
+        
+        .consequences-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+        }
+        
+        /* Conclusion Section */
+        .conclusion {
+            text-align: center;
+            background-color: var(--secondary-color);
+            padding: 3rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        footer a {
+            color: var(--white);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        
+        footer a:hover {
+            color: var(--secondary-color);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .problems-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Impacto do Desmatamento</h1>
+            <p>Este projeto é uma página web informativa sobre os impactos do desmatamento no meio ambiente e na qualidade de vida das pessoas.</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#problemas">Os Problemas</a></li>
+                <li><a href="#consequencias">Consequências</a></li>
+                <li><a href="#conclusao">Conclusão</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <section id="problemas">
+            <h2 class="section-title">Problemas Causados pelo Desmatamento</h2>
+            <p>O desmatamento gera uma série de problemas ambientais e sociais que afetam diretamente a qualidade de vida das pessoas e o equilíbrio dos ecossistemas.</p>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <h3>Aumento das Enchentes</h3>
+                    <p>Sem a cobertura vegetal, o solo perde sua capacidade de absorver água da chuva, levando a enchentes mais frequentes e intensas em áreas urbanas e rurais.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Calor Excessivo</h3>
+                    <p>A remoção das árvores contribui para a formação de ilhas de calor urbanas, aumentando as temperaturas locais e tornando as cidades menos habitáveis.</p>
+                </div>
+                
+                <div class="problem-card">
+                    <h3>Redução da Qualidade de Vida</h3>
+                    <p>O desmatamento afeta a qualidade do ar, a disponibilidade de água potável e a biodiversidade, impactando diretamente a saúde e o bem-estar das populações.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="consequencias">
+            <h2 class="section-title">Consequências do Desmatamento</h2>
+            <p>As consequências da destruição das florestas são vastas e interconectadas, afetando desde ecossistemas locais até o clima global.</p>
+            
+            <div class="consequences-list">
+                <ul>
+                    <li><strong>Aumento das enchentes e erosão do solo:</strong> Sem as raízes das árvores para estabilizar o solo, ocorre maior erosão e assoreamento dos rios.</li>
+                    <li><strong>Mudanças climáticas:</strong> As florestas são grandes armazenadoras de carbono; seu desmatamento libera CO2 e contribui para o aquecimento global.</li>
+                    <li><strong>Perda da biodiversidade:</strong> Milhares de espécies perdem seu habitat, levando muitas à extinção.</li>
+                    <li><strong>Impacto na saúde pública:</strong> Aumento de doenças respiratórias e alteração nos padrões de doenças transmitidas por vetores.</li>
+                    <li><strong>Impactos econômicos:</strong> Redução da produtividade agrícola a longo prazo e perda de recursos naturais valiosos.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="conclusao">
+            <h2 class="section-title">Conclusão</h2>
+            <div class="conclusion">
+                <p>O combate ao desmatamento requer ações urgentes em múltiplos níveis, desde políticas públicas eficazes até mudanças nos padrões de consumo individuais.</p>
+                <p>A preservação ambiental, o reflorestamento e a adoção de práticas sustentáveis são essenciais para garantir um futuro habitável para as próximas gerações.</p>
+                <p>Cada um de nós pode contribuir através de pequenas ações diárias e do apoio a iniciativas de conservação ambiental.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>Faça parte dessa causa! <a href="https://www.linkedin.com/" target="_blank">Conecte-se no LinkedIn</a> para saber como ajudar.</p>
+            <p>Projeto informativo sobre o Impacto do Desmatamento</p>
+        </div>
+    </footer>
+</body>
+</html>

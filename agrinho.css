@@ -1,0 +1,201 @@
+/* style.css */
+:root {
+    --primary-color: #2e7d32;
+    --secondary-color: #81c784;
+    --dark-color: #1b5e20;
+    --light-color: #e8f5e9;
+    --text-color: #333;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 3rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--dark-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--white);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Sections */
+section {
+    padding: 3rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Problems Section */
+.problems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.problem-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+}
+
+.problem-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Consequences Section */
+.consequences-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.consequences-list ul {
+    list-style-position: inside;
+    margin-bottom: 2rem;
+}
+
+.consequences-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+/* Conclusion Section */
+.conclusion {
+    text-align: center;
+    background-color: var(--secondary-color);
+    padding: 3rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--white);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .problems-grid {
+        grid-template-columns: 1fr;
+    }
+}
